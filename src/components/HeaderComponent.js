@@ -12,7 +12,7 @@ const HeaderComponent = () => {
               <Tab label='Contact' to='/Contact' component={Link} />
             </Tabs>
             <Tabs sx={{ marginLeft: 'auto' }}>
-              <Tab label='Contact' to='/Login' component={Link} />
+              <Tab label='Login' to='/Login' component={Link} />
             </Tabs>
           </Toolbar>
         </AppBar>
