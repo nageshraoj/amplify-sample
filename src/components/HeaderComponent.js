@@ -1,17 +1,19 @@
 import { AppBar, Toolbar, Tabs, Tab, Container } from '@mui/material'
-import { createStyles } from '@mui/styles'
+import { makeStyles } from '@mui/styles'
 import { Link } from 'react-router-dom'
+
 const HeaderComponent = () => {
-  const useStyle = createStyles({
+  const useStyle = makeStyles((theme) => ({
     tabStyle: {
       borderRadius: '10px',
       '&:hover': {
-        backgroundColor: '$F0BB62',
+        backgroundColor: '#D8B6A4',
+        borderRadius: '10px',
       },
     },
-  })
+  }))
 
-  const style = useStyle()
+  const tabstyle = useStyle()
 
   return (
     <>
@@ -20,19 +22,19 @@ const HeaderComponent = () => {
           <Toolbar>
             <Tabs>
               <Tab
-                className={style.tabStyle}
+                className={tabstyle.tabStyle}
                 label='Home'
                 to='/'
                 component={Link}
               />
               <Tab
-                className={style.tabStyle}
+                className={tabstyle.tabStyle}
                 label='About'
                 to='/About'
                 component={Link}
               />
               <Tab
-                className={style.tabStyle}
+                className={tabstyle.tabStyle}
                 label='Contact'
                 to='/Contact'
                 component={Link}
@@ -40,7 +42,7 @@ const HeaderComponent = () => {
             </Tabs>
             <Tabs sx={{ marginLeft: 'auto' }}>
               <Tab
-                className={style.tabStyle}
+                className={tabstyle.tabStyle}
                 label='Login'
                 to='/Login'
                 component={Link}
