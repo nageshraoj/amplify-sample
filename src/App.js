@@ -4,6 +4,7 @@ import HeaderComponent from './components/HeaderComponent'
 import AboutPage from './components/Pages/AboutPage'
 import ContactPage from './components/Pages/ContactPage'
 import HomePage from './components/Pages/HomePage'
+import LoginPage from './components/Pages/LoginPage'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/About' element={<AboutPage />} />
           <Route path='/Contact' element={<ContactPage />} />
+          <Route path='/Login' element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
       <h1>Hello</h1>
